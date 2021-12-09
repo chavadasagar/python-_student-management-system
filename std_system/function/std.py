@@ -1,7 +1,7 @@
 from os import name
 import sqlite3 as sql
 
-class std():
+class std:
 
     name = ""
     no = ""
@@ -14,8 +14,7 @@ class std():
         self.no = no          
         self.ct = ct  
 
-    def __init__(self):
-        pass   
+      
 
     def setnm(self,nm):
         self.name = name
@@ -53,3 +52,7 @@ class std():
     def search(self,search):
          rec = self.con.execute(f"select * from info where name like '%{search}%' or id like '%{search}%' or ct like '%{search}%' or phno like '%{search}%'")
          return rec.fetchall()
+
+
+obj = std("ram",3454,"rajkot")
+print(obj.showall())
