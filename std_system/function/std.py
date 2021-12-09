@@ -53,6 +53,3 @@ class std:
          rec = self.con.execute(f"select * from info where name like '%{search}%' or id like '%{search}%' or ct like '%{search}%' or phno like '%{search}%'")
          return rec.fetchall()
 
-
-obj = std("ram",3454,"rajkot")
-print(obj.showall())
